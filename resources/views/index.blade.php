@@ -5,7 +5,7 @@
 <div class="card card--auth form">
     <h1>Sign in</h1>
     <p class="text-muted">Use your university account.</p>
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" action="{{ route('login.attempt') }}">
         @csrf
         <label for="email">Email</label>
         <input id="email" name="email" type="email" class="form__input @error('email') is-invalid @enderror" value="{{ old('email', '') }}">
